@@ -1,5 +1,6 @@
 package model.pieces;
 
+import model.Board.Board;
 import model.chess.Color;
 import model.chess.Position;
 
@@ -19,17 +20,19 @@ public class Pawn extends Piece {
         Position p=getPosition();
 
 
-        positions.add(Position.moovePosition(p,-1,1,b));
-        positions.add(Position.moovePosition(p,0,1,b));
-        positions.add(Position.moovePosition(p,1,1,b));
+        addMove(   positions, Position.moovePosition(p,-1,1,b));
+        addMove(   positions, Position.moovePosition(p,0,1,b));
+        addMove(   positions, Position.moovePosition(p,1,1,b));
 
         if (!(firstMove)){
-            positions.add(Position.moovePosition(p,0,2,b));
+            addMove(   positions, Position.moovePosition(p,0,2,b));
         }
 
         return positions;
 
     }
+
+
 
     @Override
     public void changePosition(Position pos){

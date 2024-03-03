@@ -1,5 +1,6 @@
 package model.pieces;
 
+import model.Board.Board;
 import model.chess.Color;
 import model.chess.Position;
 
@@ -14,19 +15,18 @@ public class Bishop  extends Piece{
     @Override
     public ArrayList<Position> calculateMovements() {
         ArrayList<Position> positions= new ArrayList<>();
-        Position p=getPosition();
 
-        boolean outOfRange= false;
-        int size=getSIZEBOARD();
-        while (!outOfRange){
-            if (getPosition().getX()<5){
+        int i = 1;
+        while (i<Board.getSize()){
+            addMove(positions,Position.moovePosition(getPosition(),-i,i,true));
+            addMove(positions,Position.moovePosition(getPosition(),i,-i,true));
+            addMove(positions,Position.moovePosition(getPosition(),-i,-i,true));
+            addMove(positions,Position.moovePosition(getPosition(),i,i,true));
 
-            }
-
-
+            i++;
         }
 
-            return positions;
+        return positions;
 
     }
 

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public abstract  class Piece {
 
-    private final int SIZEBOARD=7;
+
     private Color color;
     private Position position;
 
@@ -33,9 +33,11 @@ public abstract  class Piece {
      }
 
 
-     public int getSIZEBOARD(){
-         return SIZEBOARD;
-     }
+    public void addMove(ArrayList<Position> p,Position pos) {
+        if (Position.validatePosition(pos)) {
+            p.add(pos);
+        }
+    }
 
 
      public boolean equalsPosition(Position pos){
