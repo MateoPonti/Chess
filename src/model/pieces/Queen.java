@@ -18,4 +18,9 @@ public class Queen extends Piece{
         p.addAll(b.calculateMovements(pos));
         return p;
     }
+
+    @Override
+    public String toString() {
+        return "Q";
+    }
 }

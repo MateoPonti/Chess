@@ -25,4 +25,9 @@ public class King extends Piece{
         addMove(positions,Position.moovePosition(pos,-1,0,true));
         return positions;
     }
+
+    @Override
+    public String toString() {
+        return "K";
+    }
 }

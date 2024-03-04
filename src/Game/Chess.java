@@ -1,16 +1,14 @@
 package Game;
 
-import model.chess.Color;
-import model.chess.Position;
-import model.pieces.Bishop;
-import model.pieces.Horse;
-import model.pieces.Queen;
 
-import java.util.ArrayList;
+import model.Board.Board;
+import model.pieces.Piece;
 
 public class Chess {
     public static void main(String[] args) {
+        Board b=new Board();
 
+        System.out.println(b);
     }
 
 }

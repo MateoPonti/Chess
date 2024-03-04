@@ -35,7 +35,7 @@ public class Position {
 
 
     public static  boolean validatePosition(Position p){
-        return  (p!=null && p.getX()>=0 && p.getX()<= Board.getSize() && p.getY()>=0 && p.getY()<= Board.getSize());
+        return  (p!=null && p.getX()>=0 && p.getX()<= Board.getSize() && p.getY()>=0 && p.getY()<Board.getSize());
     }
     public static  Position moovePosition(Position p,int x, int y,boolean b) {
         Position pos;

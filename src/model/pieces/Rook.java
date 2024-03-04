@@ -19,20 +19,20 @@ public class Rook extends Piece {
 
         int size = Board.getSize();
 
-        for (int i = 1 ; i<=size-pos.getY();i++){
+        for (int i = 1 ; i<size-pos.getY();i++){
             addMove(   positions, (Position.moovePosition(pos,0,i,true)));
         }
 
-        for (int i = 1 ; i<=pos.getY();i++){
+        for (int i = 1 ; i<pos.getY();i++){
             addMove(   positions, (Position.moovePosition(pos,0,i,false)));
 
         }
 
-        for (int i = 1 ; i<=size-pos.getX();i++){
+        for (int i = 1 ; i<size-pos.getX();i++){
             addMove(   positions, (Position.moovePosition(pos,i,0,true)));
         }
 
-        for (int i = 1 ; i<=pos.getX();i++){
+        for (int i = 1 ; i<pos.getX();i++){
             addMove(   positions, (Position.moovePosition(pos,i,0,false)));
         }
 
@@ -40,4 +40,8 @@ public class Rook extends Piece {
 
     }
 
+    @Override
+    public String toString() {
+        return "R";
+    }
 }

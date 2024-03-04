@@ -29,4 +29,9 @@ public class Horse extends Piece {
 
         return positions;
     }
+
+    @Override
+    public String toString() {
+        return "H";
+    }
 }
