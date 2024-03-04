@@ -12,9 +12,8 @@ public abstract  class Piece {
     private Position position;
 
 
-    public Piece(Color color,Position position){
+    public Piece(Color color){
         this.color=color;
-        this.position=position;
      }
 
 
@@ -22,15 +21,8 @@ public abstract  class Piece {
         return color;
      }
 
-    public final Position getPosition(){
-        return position;
-    }
 
-     public void changePosition(Position pos){
-        if (validatePosition(pos)){
-            this.position=pos;
-        }
-     }
+
 
 
     public void addMove(ArrayList<Position> p,Position pos) {
@@ -45,19 +37,8 @@ public abstract  class Piece {
      }
 
 
-     public  abstract ArrayList<Position> calculateMovements();
-
-    public  boolean validatePosition(Position p){
-        boolean isValidate=false;
-        ArrayList<Position> positions= calculateMovements();
-        int i=0;
-        while (i<positions.size() && !isValidate){
-            isValidate=positions.get(i).equals(p);
-            i++;
-        }
-        return isValidate;
+     public  abstract ArrayList<Position> calculateMovements(Position pos);
 
 
-    }
 
 }

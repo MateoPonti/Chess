@@ -8,20 +8,20 @@ import java.util.ArrayList;
 
 public class Bishop  extends Piece{
 
-    public Bishop(Color c, Position p){
-        super(c,p);
+    public Bishop(Color c){
+        super(c);
     }
 
     @Override
-    public ArrayList<Position> calculateMovements() {
+    public ArrayList<Position> calculateMovements(Position pos) {
         ArrayList<Position> positions= new ArrayList<>();
 
         int i = 1;
         while (i<Board.getSize()){
-            addMove(positions,Position.moovePosition(getPosition(),-i,i,true));
-            addMove(positions,Position.moovePosition(getPosition(),i,-i,true));
-            addMove(positions,Position.moovePosition(getPosition(),-i,-i,true));
-            addMove(positions,Position.moovePosition(getPosition(),i,i,true));
+            addMove(positions,Position.moovePosition(pos,-i,i,true));
+            addMove(positions,Position.moovePosition(pos,i,-i,true));
+            addMove(positions,Position.moovePosition(pos,-i,-i,true));
+            addMove(positions,Position.moovePosition(pos,i,i,true));
 
             i++;
         }

@@ -7,15 +7,15 @@ import java.util.ArrayList;
 
 public class Queen extends Piece{
 
-    public Queen(Color c, Position p){
-        super(c,p);
+    public Queen(Color c){
+        super(c);
     }
     @Override
-    public ArrayList<Position> calculateMovements() {
-        Rook r = new Rook(getColor(),getPosition());
-        Bishop b= new Bishop(getColor(),getPosition());;
-        ArrayList<Position> p= r.calculateMovements();
-        p.addAll(b.calculateMovements());
+    public ArrayList<Position> calculateMovements(Position pos) {
+        Rook r = new Rook(getColor());
+        Bishop b= new Bishop(getColor());;
+        ArrayList<Position> p= r.calculateMovements(pos);
+        p.addAll(b.calculateMovements(pos));
         return p;
     }
 }
