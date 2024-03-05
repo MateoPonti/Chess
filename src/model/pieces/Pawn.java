@@ -36,9 +36,6 @@ public class Pawn extends Piece {
         return (Color.WHITE==getColor() && pos.getX()==1) || (Color.BLACK==getColor() && pos.getX()==6);
     }
 
-    @Override
-    public String toString() {
-        return "P";
-    }
+
 }
 

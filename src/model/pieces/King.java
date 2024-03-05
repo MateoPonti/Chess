@@ -26,8 +26,5 @@ public class King extends Piece{
         return positions;
     }
 
-    @Override
-    public String toString() {
-        return "K";
-    }
+
 }

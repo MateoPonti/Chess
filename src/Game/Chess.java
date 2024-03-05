@@ -1,14 +1,14 @@
 package Game;
 
 
-import model.Board.Board;
-import model.pieces.Piece;
+
+import view.View;
 
 public class Chess {
     public static void main(String[] args) {
-        Board b=new Board();
 
-        System.out.println(b);
+        View view = new View();
+
     }
 
 }

@@ -57,38 +57,5 @@ public class Board {
         return  SIZEBOARD;}
 
 
-    @Override
-    public String toString() {
-        StringBuilder boardS= new StringBuilder();
 
-        for (int i = 0; i<Board.getSize();i++) {
-            for (int j = 0; j<Board.getSize();j++) {
-                String s="";
-                if (j == 0){
-                  s+=(SIZEBOARD-i)+" | ";
-                }
-                if (board[i][j]!=null){
-                    s+=" "+board[i][j].toString()+" ";}
-                else {
-                    s+=" - ";
-                }
-                boardS.append(s);
-            }
-            boardS.append("\n");
-        }
-
-        for (int i = 0; i<Board.getSize()-1;i++) {
-            boardS.append("----");
-        }
-        boardS.append("\n");
-
-        String s="    ";
-        for (int letter = 'A'; letter <= 'H'; letter++) {
-            s+=" "+(char) letter+" ";
-        }
-        boardS.append(s);
-
-
-        return boardS.toString();
-    }
 }
